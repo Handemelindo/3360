@@ -113,13 +113,7 @@
         combo_rgui {
             timeout-ms = <50>;
             key-positions = <2 38>;
-            bindings = < &kp LSHFT >;
-        };
-
-        combo_gui {
-            timeout-ms = <50>;
-            key-positions = <3 38>;
-            bindings = < &kp LSHFT >;
+            bindings = < &mkp LCLK >;
         };
 
         combo_LSHFT {
@@ -160,7 +154,7 @@
             label = "DEFAULT";
             bindings = <
 &lt 3 ESC  &kp Q  &kp W             &kp E      &kp R            &kp T      &kp Y       &kp U        &kp I      &kp O      &kp P     &lt 3 MINUS
-&kp ENTER  &kp A  &mt LEFT_SHIFT S  &kp D      &kp F            &kp G      &kp H       &kp J        &lt 2 K    &lt 1 L    &kp SEMI  &kp SQT
+&kp ENTER  &kp A  &mt LEFT_SHIFT S  &kp D      &kp F            &kp G      &kp H       &kp J        &kp K      &kp L      &kp SEMI  &kp SQT
 &kp CAPS   &kp Z  &kp X             &kp C      &kp V            &kp B      &kp N       &kp M        &kp COMMA  &kp DOT    &kp FSLH  &kp BSLH
                   &kp LC(C)         &kp LC(V)  &kp BSPC         &kp SPACE  &lt 2 LEFT  &lt 1 RIGHT  &kp LBKT   &kp RBKT
                   &kp LEFT_ALT      &kp TAB    &mt LCTRL LSHFT  &lt 1 DEL  &kp UP      &kp EQUAL    &kp DOWN   &kp RCTRL
