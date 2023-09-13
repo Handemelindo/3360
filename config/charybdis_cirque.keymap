@@ -107,19 +107,23 @@ modcp: mod_copy {
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <2 38>;
+            key-positions = <0 38>;
             bindings = <&kp TAB>;
         };
              combo_rgui {
             timeout-ms = <50>;
-            key-positions = <3 38>;
-            bindings = <&kp CAPS>;
+            key-positions = <14 39>;
+            bindings = < &mkp LCLK>;
         };
-        
+              combo_ygui {
+            timeout-ms = <50>;
+            key-positions = <15 39>;
+            bindings = < &mkp LCLK>;
+        };
          combo_LSHFT {
             timeout-ms = <50>;
             key-positions = <14 38>;
-            bindings = <&kp  LSHFT>;
+            bindings = <&mkp RCLK>;
         };
        
          combo_2 {
