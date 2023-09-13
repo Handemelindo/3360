@@ -153,8 +153,8 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 3 ESC  &kp Q  &kp W             &kp E      &kp R            &kp T      &kp Y       &kp U        &kp I      &kp O      &kp P     &lt 3 MINUS
-&kp ENTER  &kp A  &mt LEFT_SHIFT S  &kp D      &kp F            &kp G      &kp H       &kp J        &kp K      &kp L      &kp SEMI  &kp SQT
+&lt 3 ESC  &kp Q  &lt 1 W    &lt 2 E     &kp R            &kp T      &kp Y       &kp U        &lt 1 I      &lt 2 O      &kp P     &lt 3 MINUS
+&kp ENTER  &kp A  &mt SHIFT S  &kp D      &kp F            &kp G      &kp H       &kp J        &kp K      &mt SHIFT L      &kp SEMI  &kp SQT
 &kp CAPS   &kp Z  &kp X             &kp C      &kp V            &kp B      &kp N       &kp M        &kp COMMA  &kp DOT    &kp FSLH  &kp BSLH
                   &kp LC(C)         &kp LC(V)  &kp BSPC         &kp SPACE  &lt 2 LEFT  &lt 1 RIGHT  &kp LBKT   &kp RBKT
                   &kp LEFT_ALT      &kp TAB    &mt LCTRL LSHFT  &lt 1 DEL  &kp UP      &kp EQUAL    &kp DOWN   &kp RCTRL
@@ -167,10 +167,10 @@
         number_layer {
             label = "NUMBER";
             bindings = <
-&kp TAB    &kp PLUS         &kp N7     &kp N8          &kp N9    &kp KP_SLASH  &kp F12         &kp F7     &kp F8  &kp F9  &kp F10  &kp F11
+AS(GRAVE)    &kp PLUS         &kp N7     &kp N8          &kp N9    &kp KP_SLASH  &kp F12         &kp F7     &kp F8  &kp F9  &none  AS(EQUAL) 
 &kp ENTER  &kp MINUS        &kp N4     &kp N5          &kp N6    &kp KP_DOT    &macro_email_q  &kp F4     &kp F5  &kp F6  &none    &none
 &kp ENTER  &kp KP_MULTIPLY  &kp N1     &kp N2          &kp N3    &kp N0        &macro_phone    &kp F1     &kp F2  &kp F3  &none    &none
-                            &kp LC(C)  &mt LALT LC(V)  &kp BSPC  &kp SPACE     &kp LEFT        &kp RIGHT  &none   &none
+                            &kp LC(C)  &mt LALT LC(V)  &kp BSPC  &kp SPACE     &kp LEFT        &kp RIGHT  &kp F10  &kp F11
                             &trans     &none           &to 0     &trans        &kp UP          &kp DOWN   &none   &none
             >;
 
@@ -194,8 +194,8 @@
             label = "HOTKEY";
             bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
-&none  &none         &mkp LCLK     &mkp MCLK     &mkp RCLK     &out OUT_USB  &out OUT_USB  &none         &none         &none         &none         &ext_power EP_ON
-&none  &none         &none         &none         &none         &out OUT_BLE  &out OUT_BLE  &none         &none         &none         &none         &ext_power EP_OFF
+&none  &none         &mkp LCLK     &mkp MCLK     &mkp RCLK     &out OUT_USB  &out OUT_USB  &none         &none         &none         &none         &none
+&none  &none         &none         &none         &none         &out OUT_BLE  &out OUT_BLE  &none         &none         &none         &none    &none
                      &none         &none         &none         &none         &none         &none         &none         &none
                      &none         &none         &none         &none         &none         &none         &none         &none
             >;
