@@ -115,7 +115,7 @@
             key-positions = <2 38>;
             bindings = < &mkp LCLK >;
         };
- combo_lgui {
+       combo_gui {
             timeout-ms = <50>;
             key-positions = <3 38>;
             bindings = < &mkp RCLK >;
