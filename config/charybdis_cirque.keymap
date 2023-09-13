@@ -161,7 +161,7 @@
         };
   combo_GUI {
             timeout-ms = <50>;
-            key-positions = <27 38>;
+            key-positions = <28 38>;
             bindings = < &kp TAB >;
         };
     };
