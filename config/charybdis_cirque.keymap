@@ -173,7 +173,7 @@
             label = "DEFAULT";
             bindings = <
 &lt 3 ESC  &kp Q  &lt 1 W    &lt 2 E     &kp R            &kp T      &kp Y       &kp U        &lt 1 I      &lt 2 O      &kp P     &lt 3 MINUS
-&kp ENTER  &kp A  &mt LSHFT S  &kp D      &kp F            &kp G      &kp H       &kp J        &kp K      &mt LSHFT L      &kp SEMI  &kp SQT
+&kp ENTER  &kp A  &mt LSHFT S  &kp D      &kp F            &kp G      &kp H       &kp J        &mt LCTRL K      &mt LSHFT L      &kp SEMI  &kp SQT
 &kp CAPS   &kp Z  &kp X             &kp C      &kp V            &kp B      &kp N       &kp M        &kp COMMA  &kp DOT    &kp FSLH  &kp BSLH
                   &kp LC(C)         &kp LC(V)  &kp BSPC         &kp SPACE  &lt 2 LEFT  &lt 1 RIGHT  &kp LBKT   &kp RBKT
                   &kp LEFT_ALT     &tog 1    &mt LCTRL LSHFT  &lt 1 DEL  &kp UP      &kp EQUAL    &kp DOWN   &kp RCTRL
