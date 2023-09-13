@@ -106,16 +106,20 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 38>;
-            bindings = <&kp TAB>;
+            key-positions = <2 38>;
+            bindings = <&mkp LCLK>;
         };
 
         combo_rgui {
             timeout-ms = <50>;
-            key-positions = <2 38>;
-            bindings = < &mkp LCLK >;
+            key-positions = <3 38>;
+            bindings = <  &mkp MCLK >;
         };
-
+ combo_rg {
+            timeout-ms = <50>;
+            key-positions = <4 38>;
+            bindings = <  &mkp RCLK >;
+        };
         combo_LSHFT {
             timeout-ms = <50>;
             key-positions = <14 38>;
@@ -133,7 +137,17 @@
             key-positions = <16 38>;
             bindings = <&kp N3>;
         };
+  combo_4 {
+            timeout-ms = <50>;
+            key-positions = <15 39>;
+            bindings = <&kp N4>;
+        };
 
+        combo_5 {
+            timeout-ms = <50>;
+            key-positions = <16 39>;
+            bindings = <&kp N5>;
+        };
         combo_LGUI {
             timeout-ms = <50>;
             key-positions = <26 38>;
@@ -144,6 +158,11 @@
             timeout-ms = <50>;
             key-positions = <27 38>;
             bindings = <&tog 1>;
+        };
+  combo_GUI {
+            timeout-ms = <50>;
+            key-positions = <27 38>;
+            bindings = < &kp TAB >;
         };
     };
 
