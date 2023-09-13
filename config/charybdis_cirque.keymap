@@ -113,12 +113,12 @@
         combo_rgui {
             timeout-ms = <50>;
             key-positions = <2 38>;
-            bindings = < &mkp LCLK >;
+            bindings = < &kp LSHFT >;
         };
        combo_gui {
             timeout-ms = <50>;
             key-positions = <3 38>;
-            bindings = < &mkp RCLK >;
+            bindings = < &kp LSHFT >;
         };
         combo_LSHFT {
             timeout-ms = <50>;
