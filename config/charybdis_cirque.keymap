@@ -103,7 +103,49 @@ modcp: mod_copy {
         
   
 
-
+  combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <2 38>;
+            bindings = <&kp TAB>;
+        };
+             combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <3 38>;
+            bindings = <&kp CAPS>;
+        };
+        
+         combo_LSHFT {
+            timeout-ms = <50>;
+            key-positions = <14 38>;
+            bindings = <&kp  LSHFT>;
+        };
+       
+         combo_2 {
+            timeout-ms = <50>;
+            key-positions = <15 38>;
+            bindings = <&kp N2 >;
+        };
+         combo_3 {
+            timeout-ms = <50>;
+            key-positions = <16 38>;
+            bindings = <&kp N3>;
+        };
+            combo_LGUI {
+            timeout-ms = <50>;
+            key-positions = <26 38>;
+            bindings = <&kp LGUI>;
+        };
+              combo_GUI {
+            timeout-ms = <50>;
+            key-positions = <27 38>;
+            bindings = <&tog 1>;
+        };
+   
+        
+  
+   };
 
 
     keymap {
@@ -152,7 +194,7 @@ sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
             label = "HOTKEY";
             bindings = <
 &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
-&none  &none         &none         &none         &none         &out OUT_USB  &out OUT_USB  &none         &none         &none         &none         &ext_power EP_ON
+&none  &none         &mkp LCLK &mkp MCLK &mkp RCLK          &out OUT_USB  &out OUT_USB  &none         &none         &none         &none         &ext_power EP_ON
  &none       &none         &none         &none         &none         &out OUT_BLE  &out OUT_BLE  &none         &none         &none         &none         &ext_power EP_OFF
                           &none         &none         &none         &none         &none         &none         &none         &none
                           &none         &none         &none         &none         &none         &none         &none         &none                                                    
