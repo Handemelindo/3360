@@ -87,16 +87,19 @@
 
     combos {
         compatible = "zmk,combos";
-    combo_left {
+
+        combo_left {
             timeout-ms = <50>;
             key-positions = <14 38>;
             bindings = <&kp LSHFT>;
         };
-    combo_right {
+
+        combo_right {
             timeout-ms = <50>;
             key-positions = <14 38>;
             bindings = <&kp LSHFT>;
         };
+
         combo_LSHFT {
             timeout-ms = <50>;
             key-positions = <14 38>;
@@ -105,19 +108,19 @@
 
         combo_2 {
             timeout-ms = <50>;
-            key-positions = <15 38>;
+            key-positions = <15 14>;
             bindings = <&kp N2>;
         };
 
         combo_3 {
             timeout-ms = <50>;
-            key-positions = <16 38>;
+            key-positions = <26 27>;
             bindings = <&kp N3>;
         };
 
         combo_4 {
             timeout-ms = <50>;
-            key-positions = <15 39>;
+            key-positions = <36 37>;
             bindings = <&kp N4>;
         };
 
@@ -160,8 +163,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
-
-       trackball-bindings = <&tmv>;
+            trackball-bindings = <&tmv>;
         };
 
         number_layer {
@@ -174,7 +176,7 @@
                             &trans     &none           &to 0     &trans        &kp UP          &kp DOWN   &none    &none
             >;
 
-           trackball-bindings = <&tsl>;
+            trackball-bindings = <&tsl>;
         };
 
         symbol_layer {
@@ -187,7 +189,7 @@
                             &none     &none      &kp LSHFT  &none      &none  &none     &none     &none
             >;
 
-         trackball-bindings = <&tmv_fine>;
+            trackball-bindings = <&tmv_fine>;
         };
 
         hotkey_layer {
@@ -200,7 +202,7 @@
                      &none         &none         &none         &none         &none         &none         &none         &none
             >;
 
-             trackball-bindings = <&tmv_x>;
+            trackball-bindings = <&tmv_x>;
         };
     };
 };
