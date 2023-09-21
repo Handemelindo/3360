@@ -90,19 +90,19 @@
         combo_left {
             timeout-ms = <50>;
             key-positions = <38 2>;
-            bindings = <&kp LSHFT>;
+            bindings = <&mwh MWH_R>;
         };
 
         combo_right {
             timeout-ms = <50>;
             key-positions = <38 15>;
-            bindings = <&kp LSHFT>;
+            bindings = <&mwh MWH_L>;
         };
 
         combo_LSHFT {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            bindings = <&kp LSHFT>;
+            bindings = <&mwh MWH_L>;
         };
 
         combo_2 {
