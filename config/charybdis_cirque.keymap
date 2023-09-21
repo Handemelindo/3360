@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // mouse move settings
-/*
+
 #define MMV_U MOVE_VERT(-650)
 #define MMV_D MOVE_VERT(650)
 #define MMV_L MOVE_HOR(-650)
@@ -27,7 +27,7 @@
     time-to-max-speed-ms = <2000>;
     acceleration-exponent = <0>;
 };
-*/
+
 
 #define DEFAULT 0
 #define NUMBER  1
