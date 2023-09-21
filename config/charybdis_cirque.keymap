@@ -146,6 +146,18 @@
             key-positions = <28 38>;
             bindings = < &kp TAB >;
         };
+
+        combo_U {
+            timeout-ms = <50>;
+            key-positions = <28 38>;
+            bindings = < &kp TAB >;
+        };
+        combo_UI {
+            timeout-ms = <50>;
+            key-positions = <28 38>;
+            bindings = < &kp TAB >;
+        };
+
     };
 
     keymap {
