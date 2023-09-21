@@ -149,15 +149,15 @@
 
         combo_U {
             timeout-ms = <50>;
-            key-positions = <28 38>;
-            bindings = < &kp TAB >;
-        };
-        combo_UI {
-            timeout-ms = <50>;
-            key-positions = <28 38>;
-            bindings = < &kp TAB >;
+            key-positions = <8 9>;
+            bindings = <&mo 1>;
         };
 
+        combo_UI {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
     };
 
     keymap {
