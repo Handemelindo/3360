@@ -107,18 +107,18 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <2 38>;
-            bindings = <&mkp LCLK>;
+            bindings = <>;
         };
 
         combo_rgui {
             timeout-ms = <50>;
             key-positions = <3 38>;
-            bindings = <  &mkp MCLK >;
+            bindings = <   >;
         };
  combo_rg {
             timeout-ms = <50>;
             key-positions = <4 38>;
-            bindings = <  &mkp RCLK >;
+            bindings = <   >;
         };
         combo_LSHFT {
             timeout-ms = <50>;
