@@ -87,17 +87,17 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_left {
-            timeout-ms = <50>;
-            key-positions = <38 2>;
-            bindings = <&mwh MWH_R>;
-        };
+   //     combo_left {
+    //        timeout-ms = <50>;
+     //       key-positions = <38 2>;
+     //       bindings = <&mwh MWH_R>;
+   //     };
 
-        combo_right {
-            timeout-ms = <50>;
-            key-positions = <38 15>;
-            bindings = <&mwh MWH_L>;
-        };
+    //    combo_right {
+    //        timeout-ms = <50>;
+     //       key-positions = <38 15>;
+//bindings = <&mwh MWH_L>;
+    //    };
 
         combo_LSHFT {
             timeout-ms = <50>;
