@@ -89,19 +89,19 @@
 
         combo_left {
             timeout-ms = <50>;
-            key-positions = <38 2>;
+            key-positions = <2 3>;
             bindings = <&mkp LCLK>;
         };
 
         combo_right {
             timeout-ms = <50>;
-            key-positions = <38 15>;
+            key-positions = <15 16>;
             bindings = < &mkp MCLK >;
         };
 
         combo_LSHFT {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <27 28>;
             bindings = <&mkp RCLK>;
         };
 
@@ -125,7 +125,7 @@
 
         combo_5 {
             timeout-ms = <50>;
-            key-positions = <16 39>;
+            key-positions = <32 33>;
             bindings = <&kp N5>;
         };
 
@@ -180,11 +180,11 @@
         number_layer {
             label = "NUMBER";
             bindings = <
-&kp FSLH   &kp STAR   &kp N7     &kp N8          &kp N9    &kp EQUAL  &kp F12   &kp F7     &kp F8   &kp F9   &none  &kp EQUAL
-&kp ENTER  &kp MINUS  &kp N4     &kp N5          &kp N6    &kp DOT    &none     &kp F4     &kp F5   &kp F6   &none  &kp MINUS
-&kp EQUAL  &kp PLUS   &kp N1     &kp N2          &kp N3    &kp N0     &none     &kp F1     &kp F2   &kp F3   &none  &none
-                      &kp LC(C)  &mt LALT LC(V)  &kp BSPC  &kp SPACE  &kp LEFT  &kp RIGHT  &kp F10  &kp F11
-                      &trans     &none           &kp SEMI  &kp SEMI   &kp UP    &kp DOWN   &none    &none
+&kp FSLH   &kp STAR   &kp N7     &kp N8     &kp N9    &kp EQUAL  &kp F12   &kp F7     &kp F8   &kp F9   &none  &kp EQUAL
+&kp ENTER  &kp MINUS  &kp N4     &kp N5     &kp N6    &kp DOT    &none     &kp F4     &kp F5   &kp F6   &none  &kp MINUS
+&kp EQUAL  &kp PLUS   &kp N1     &kp N2     &kp N3    &kp N0     &none     &kp F1     &kp F2   &kp F3   &none  &none
+                      &kp LC(C)  &kp LC(V)  &kp BSPC  &kp SPACE  &kp LEFT  &kp RIGHT  &kp F10  &kp F11
+                      &trans     &none      &kp SEMI  &kp SEMI   &kp UP    &kp DOWN   &none    &none
             >;
 
             trackball-bindings = <&tsl>;
@@ -195,8 +195,8 @@
             bindings = <
 &kp C_VOL_UP   &kp C_VOL_DN  &kp AMPS  &kp STAR   &kp LPAR   &kp RPAR   &none  &none     &kp UP    &none      &none  &none
 &kp C_BRI_UP   &kp C_BRI_DN  &kp DLLR  &kp PRCNT  &kp CARET  &kp UNDER  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
-&kp LS(TILDE)  &kp GRAVE     &kp EXCL  &kp AT     &kp HASH   &kp PLUS   &none  &none     &none     &none      &none  &none
-                             &none     &none      &kp C_RW   &kp C_FF   &none  &none     &none     &none
+&kp LS(TILDE)  &kp GRAVE     &kp EXCL  &kp AT     &kp HASH   &kp PLUS   &none  &none     &kp DOWN  &none      &none  &none
+                             &none     &none      &kp ENTER  &kp SPACE  &none  &none     &none     &none
                              &none     &none      &kp LSHFT  &none      &none  &none     &none     &none
             >;
 
