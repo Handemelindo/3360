@@ -186,7 +186,7 @@
                       &kp LC(C)  &kp LC(V)  &kp BSPC  &kp SPACE  &kp LEFT  &kp RIGHT  &kp F10  &kp F11
                       &trans     &none      &kp SEMI  &kp SEMI   &kp UP    &kp DOWN   &none    &none
             >;
-
+ sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
             trackball-bindings = <&tsl>;
         };
 
@@ -201,9 +201,7 @@
             >;
 
             trackball-bindings = <&tmv_fine>;
-            sensor-bindings =
-                <&inc_dec_kp 0 0>,
-                <&inc_dec_kp 0 0>;
+       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
         };
 
         hotkey_layer {
@@ -217,6 +215,7 @@
             >;
 
             trackball-bindings = <&tmv_x>;
+ sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
         };
     };
 };
