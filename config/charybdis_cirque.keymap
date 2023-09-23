@@ -89,20 +89,20 @@
 
         combo_left {
             timeout-ms = <50>;
-           key-positions = <38 2>;
-           bindings = <&mkp RCLK>;
-       };
+            key-positions = <38 2>;
+            bindings = <&mkp RCLK>;
+        };
 
         combo_right {
-           timeout-ms = <50>;
-           key-positions = <38 15>;
-bindings = < &mkp LCLK >;
-       };
+            timeout-ms = <50>;
+            key-positions = <38 15>;
+            bindings = < &mkp LCLK >;
+        };
 
         combo_LSHFT {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            bindings = <&mkp LCLK>;
+            bindings = <&none>;
         };
 
         combo_2 {
