@@ -166,7 +166,7 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 3 ESC  &kp Q  &lt 1 W       &lt 2 E    &kp R            &kp T      &kp Y       &kp U        &kp I        &kp O        &kp P     &lt 3 MINUS
+&lt 3 ESC  &kp Q  &lt 1 W       &lt 2 E    &kp R            &kp T      &kp Y       &kp U        &kp I        &kp O        &kp P     &lt 3 EQUAL
 &kp ENTER  &kp A  &mt LSHFT S   &kp D      &kp F            &kp G      &kp H       &kp J        &mt LCTRL K  &mt LSHFT L  &kp SEMI  &kp SQT
 &kp CAPS   &kp Z  &kp X         &kp C      &kp V            &kp B      &kp N       &kp M        &kp COMMA    &kp DOT      &kp FSLH  &kp BSLH
                   &kp LC(C)     &kp LC(V)  &kp BSPC         &kp SPACE  &lt 2 LEFT  &lt 1 RIGHT  &kp LBKT     &kp RBKT
@@ -180,7 +180,7 @@
         number_layer {
             label = "NUMBER";
             bindings = <
-&kp FSLH   &kp STAR   &kp N7     &kp N8     &kp N9    &kp EQUAL  &kp F12   &kp F7     &kp F8   &kp F9   &none  &kp EQUAL
+&kp FSLH   &kp STAR   &kp N7     &kp N8     &kp N9    &kp EQUAL  &kp F12   &kp F7     &kp F8   &kp F9   &none  &kp LS(UNDER)
 &kp ENTER  &kp MINUS  &kp N4     &kp N5     &kp N6    &kp DOT    &none     &kp F4     &kp F5   &kp F6   &none  &kp MINUS
 &kp EQUAL  &kp PLUS   &kp N1     &kp N2     &kp N3    &kp N0     &none     &kp F1     &kp F2   &kp F3   &none  &none
                       &kp LC(C)  &kp LC(V)  &kp BSPC  &kp SPACE  &kp LEFT  &kp RIGHT  &kp F10  &kp F11
@@ -201,6 +201,9 @@
             >;
 
             trackball-bindings = <&tmv_fine>;
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp 0 0>;
         };
 
         hotkey_layer {
