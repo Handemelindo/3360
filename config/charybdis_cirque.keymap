@@ -153,11 +153,67 @@
             bindings = <&mo 1>;
         };
 
-        combo_UI {
+        combo_11 {
             timeout-ms = <20>;
             key-positions = <20 21>;
             bindings = <&mo 2>;
         };
+ combo_22 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_33 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_44 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_55 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_66 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_77 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_88 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_99 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_00 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_010 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+ combo_011 {
+            timeout-ms = <20>;
+            key-positions = <20 21>;
+            bindings = <&mo 2>;
+        };
+
     };
 
     keymap {
