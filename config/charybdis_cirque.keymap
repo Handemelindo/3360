@@ -158,62 +158,72 @@
             key-positions = <20 21>;
             bindings = <&mo 2>;
         };
- combo_22 {
+
+        combo_22 {
             timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_33 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_44 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_55 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_66 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_77 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_88 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_99 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_00 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_010 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
- combo_011 {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
+            key-positions = <21 26>;
+            bindings = <&kp EXCL>;
         };
 
+        combo_33 {
+            timeout-ms = <20>;
+            key-positions = <21 27>;
+            bindings = <&kp AT>;
+        };
+
+        combo_44 {
+            timeout-ms = <20>;
+            key-positions = <21 28>;
+            bindings = <&kp HASH>;
+        };
+
+        combo_55 {
+            timeout-ms = <20>;
+            key-positions = <21 14>;
+            bindings = <&kp DLLR>;
+        };
+
+        combo_66 {
+            timeout-ms = <20>;
+            key-positions = <21 15>;
+            bindings = <&kp PRCNT>;
+        };
+
+        combo_77 {
+            timeout-ms = <20>;
+            key-positions = <21 16>;
+            bindings = <&kp CARET>;
+        };
+
+        combo_88 {
+            timeout-ms = <20>;
+            key-positions = <21 2>;
+            bindings = <&kp AMPS>;
+        };
+
+        combo_99 {
+            timeout-ms = <20>;
+            key-positions = <21 3>;
+            bindings = <&kp STAR>;
+        };
+
+        combo_00 {
+            timeout-ms = <20>;
+            key-positions = <21 4>;
+            bindings = <&kp LPAR>;
+        };
+
+        combo_010 {
+            timeout-ms = <20>;
+            key-positions = <21 5>;
+            bindings = <&kp RPAR>;
+        };
+
+        combo_011 {
+            timeout-ms = <20>;
+            key-positions = <21 17>;
+            bindings = <&kp UNDER>;
+        };
     };
 
     keymap {
@@ -222,11 +232,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 3 ESC  &kp Q  &lt 1 W       &lt 2 E    &kp R            &kp T      &kp Y       &kp U        &kp I        &kp O        &kp P     &lt 3 EQUAL
-&kp ENTER  &kp A  &mt LSHFT S   &kp D      &kp F            &kp G      &kp H       &kp J        &mt LCTRL K  &mt LSHFT L  &kp SEMI  &kp SQT
-&kp CAPS   &kp Z  &kp X         &kp C      &kp V            &kp B      &kp N       &kp M        &kp COMMA    &kp DOT      &kp FSLH  &kp BSLH
-                  &kp LC(C)     &kp LC(V)  &kp BSPC         &kp SPACE  &lt 2 LEFT  &lt 1 RIGHT  &kp LBKT     &kp RBKT
-                  &kp LEFT_ALT  &kp GRAVE  &mt LCTRL LSHFT  &lt 1 DEL  &kp UP      &kp EQUAL    &kp DOWN     &kp RCTRL
+&lt 3 ESC  &kp Q  &lt 1 W       &lt 2 E    &kp R            &kp T      &kp Y       &kp U        &kp I      &mt RIGHT_SHIFT I  &kp P     &lt 3 EQUAL
+&kp ENTER  &kp A  &mt LSHFT S   &kp D      &kp F            &kp G      &kp H       &kp J        &kp K      &kp L              &kp SEMI  &kp SQT
+&kp CAPS   &kp Z  &kp X         &kp C      &kp V            &kp B      &kp N       &kp M        &kp COMMA  &kp DOT            &kp FSLH  &kp BSLH
+                  &kp LC(C)     &kp LC(V)  &kp BSPC         &kp SPACE  &lt 2 LEFT  &lt 1 RIGHT  &kp LBKT   &kp RBKT
+                  &kp LEFT_ALT  &kp GRAVE  &mt LCTRL LSHFT  &lt 1 DEL  &kp UP      &kp EQUAL    &kp DOWN   &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
@@ -242,7 +252,8 @@
                       &kp LC(C)  &kp LC(V)  &kp BSPC  &kp SPACE  &kp LEFT  &kp RIGHT  &kp F10  &kp F11
                       &trans     &none      &kp SEMI  &kp SEMI   &kp UP    &kp DOWN   &none    &none
             >;
- sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
             trackball-bindings = <&tsl>;
         };
 
@@ -257,7 +268,7 @@
             >;
 
             trackball-bindings = <&tmv_fine>;
-       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
         };
 
         hotkey_layer {
@@ -271,7 +282,7 @@
             >;
 
             trackball-bindings = <&tmv_x>;
- sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
         };
     };
 };
