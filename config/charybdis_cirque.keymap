@@ -104,11 +104,13 @@
             key-positions = <27 28>;
             bindings = <&mkp RCLK>;
         };
-      combo_LSH {
+
+        combo_LSH {
             timeout-ms = <50>;
-            key-positions = <27 28>;
+            key-positions = <38 14>;
             bindings = <&kp LSHFT>;
         };
+
         combo_2 {
             timeout-ms = <50>;
             key-positions = <15 14>;
