@@ -89,15 +89,15 @@
 
         combo_left {
             timeout-ms = <50>;
-           key-positions = <38 2>;
-           bindings = <&mkp RCLK>;
-       };
+            key-positions = <38 2>;
+            bindings = <&mkp RCLK>;
+        };
 
         combo_right {
-           timeout-ms = <50>;
-           key-positions = <38 15>;
-bindings = < &mkp LCLK >;
-       };
+            timeout-ms = <50>;
+            key-positions = <38 15>;
+            bindings = < &mkp LCLK >;
+        };
 
         combo_LSHFT {
             timeout-ms = <50>;
@@ -188,6 +188,9 @@ bindings = < &mkp LCLK >;
             >;
 
             trackball-bindings = <&tsl>;
+            sensor-bindings =
+                <&inc_dec_kp A B>,
+                <&inc_dec_kp RIGHT LEFT>;
         };
 
         symbol_layer {
@@ -201,6 +204,9 @@ bindings = < &mkp LCLK >;
             >;
 
             trackball-bindings = <&tmv_fine>;
+            sensor-bindings =
+                <&inc_dec_kp A A>,
+                <&inc_dec_kp RIGHT LEFT>;
         };
 
         hotkey_layer {
@@ -214,6 +220,9 @@ bindings = < &mkp LCLK >;
             >;
 
             trackball-bindings = <&tmv_x>;
+            sensor-bindings =
+                <&inc_dec_kp A A>,
+                <&inc_dec_kp RIGHT LEFT>;
         };
     };
 };
