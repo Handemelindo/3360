@@ -76,60 +76,6 @@
             key-positions = <2 3>;
             bindings = <&mkp LCLK>;
         };
-
-        combo_2 {
-            timeout-ms = <50>;
-            key-positions = <15 14>;
-            bindings = <&kp N2>;
-        };
-
-        combo_3 {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp N3>;
-        };
-
-        combo_4 {
-            timeout-ms = <50>;
-            key-positions = <36 37>;
-            bindings = <&kp N4>;
-        };
-
-        combo_5 {
-            timeout-ms = <50>;
-            key-positions = <16 39>;
-            bindings = <&kp N5>;
-        };
-
-        combo_LGUI {
-            timeout-ms = <50>;
-            key-positions = <26 38>;
-            bindings = <&kp LGUI>;
-        };
-
-        combo_GU {
-            timeout-ms = <50>;
-            key-positions = <27 38>;
-            bindings = <&tog 1>;
-        };
-
-        combo_GUI {
-            timeout-ms = <50>;
-            key-positions = <28 38>;
-            bindings = < &kp TAB >;
-        };
-
-        combo_U {
-            timeout-ms = <35>;
-            key-positions = <8 9>;
-            bindings = <&mo 1>;
-        };
-
-        combo_UI {
-            timeout-ms = <20>;
-            key-positions = <20 21>;
-            bindings = <&mo 2>;
-        };
     };
 
     keymap {
@@ -169,7 +115,7 @@
 &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp LC(LEFT)  &kp D          &kp U          &kp RC(RIGHT)  &kp PAUSE_BREAK  &none
 &kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &kp LEFT      &kp DOWN       &kp UP         &kp RIGHT      &kp F11          &kp RIGHT_SHIFT
 &kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP    &kp END        &kp F12          &kp RCTRL
-                                      &kp LEFT_ALT          &kp LEFT_GUI       &none            &none       &none         &none          &kp RIGHT_GUI  &kp RIGHT_ALT
+                                      &kp LEFT_ALT          &kp LEFT_GUI       &none            &to 4       &none         &none          &kp RIGHT_GUI  &kp RIGHT_ALT
                                       &none                 &none              &kp LSHFT        &none       &none         &none          &none          &none
             >;
 
