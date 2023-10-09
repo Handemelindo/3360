@@ -84,11 +84,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 2 ESC               &as RIGHT_SHIFT Q  &as RIGHT_SHIFT W  &as RIGHT_SHIFT E        &as RIGHT_SHIFT R      &as RIGHT_SHIFT R      &as LEFT_SHIFT Y  &as LEFT_SHIFT U  &as LEFT_SHIFT I      &as LEFT_SHIFT O       &as LEFT_SHIFT P          &lt 2 BACKSPACE
-&mt LEFT_SHIFT TAB      &as RIGHT_SHIFT A  &as RIGHT_SHIFT S  &as RIGHT_SHIFT D        &as RIGHT_SHIFT F      &as RIGHT_SHIFT G      &as LEFT_SHIFT H  &as LEFT_SHIFT J  &as LEFT_SHIFT K      &as LEFT_SHIFT L       &as LEFT_SHIFT SEMICOLON  &mt RIGHT_SHIFT ENTER
-&mt LCTRL LEFT_BRACKET  &as RIGHT_SHIFT Z  &as RIGHT_SHIFT X  &as RIGHT_SHIFT C        &as RIGHT_SHIFT V      &as RIGHT_SHIFT B      &as LEFT_SHIFT N  &as LEFT_SHIFT M  &as LEFT_SHIFT COMMA  &as LEFT_SHIFT PERIOD  &as LEFT_SHIFT SLASH      &mt RCTRL RIGHT_BRACKET
-                                           &kp LEFT_ALT       &mt LEFT_GUI LA(INSERT)  &kp BSPC               &lt 1 SPACE            &none             &none             &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
-                                           &none              &none                    &kp LS(LC(LA(LG(L))))  &kp LS(LA(LC(LG(R))))  &none             &none             &none                 &none
+&lt 2 ESC               &as RIGHT_SHIFT Q  &as RIGHT_SHIFT W      &as RIGHT_SHIFT E        &as RIGHT_SHIFT R      &as RIGHT_SHIFT R  &as LEFT_SHIFT Y  &as LEFT_SHIFT U  &as LEFT_SHIFT I      &as LEFT_SHIFT O       &as LEFT_SHIFT P          &lt 2 BACKSPACE
+&mt LEFT_SHIFT TAB      &as RIGHT_SHIFT A  &as RIGHT_SHIFT S      &as RIGHT_SHIFT D        &as RIGHT_SHIFT F      &as RIGHT_SHIFT G  &as LEFT_SHIFT H  &as LEFT_SHIFT J  &as LEFT_SHIFT K      &as LEFT_SHIFT L       &as LEFT_SHIFT SEMICOLON  &mt RIGHT_SHIFT ENTER
+&mt LCTRL LEFT_BRACKET  &as RIGHT_SHIFT Z  &as RIGHT_SHIFT X      &as RIGHT_SHIFT C        &as RIGHT_SHIFT V      &as RIGHT_SHIFT B  &as LEFT_SHIFT N  &as LEFT_SHIFT M  &as LEFT_SHIFT COMMA  &as LEFT_SHIFT PERIOD  &as LEFT_SHIFT SLASH      &mt RCTRL RIGHT_BRACKET
+                                           &kp LEFT_ALT           &mt LEFT_GUI LA(INSERT)  &kp BSPC               &lt 1 SPACE        &none             &none             &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
+                                           &kp LS(LA(LC(LG(R))))  &kp RC(V)                &kp LS(LC(LA(LG(L))))  &kp RC(C)          &none             &none             &none                 &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
@@ -116,7 +116,7 @@
 &kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &kp LEFT      &kp DOWN       &kp UP         &kp RIGHT      &kp F11          &kp RIGHT_SHIFT
 &kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP    &kp END        &kp F12          &kp RCTRL
                                       &kp LEFT_ALT          &kp LEFT_GUI       &none            &to 4       &none         &none          &kp RIGHT_GUI  &kp RIGHT_ALT
-                                      &none                 &none              &kp LSHFT        &none       &none         &none          &none          &none
+                                      &none                 &none              &none            &none       &none         &none          &none          &none
             >;
 
             trackball-bindings = <&tmv_fine>;
