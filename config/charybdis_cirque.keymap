@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -38,15 +39,6 @@
 
 / {
     behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings =
-                <&kp ESC>,
-                <&kp TAB>;
-        };
     };
 
     behaviors {
@@ -57,31 +49,11 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
-        modcp: mod_copy {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOD_COPY";
-            #binding-cells = <0>;
-            bindings =
-                <&as LS(C) C>,
-                <&kp C>;
-
-            mods = <(LGUI | RGUI)>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
     macros {
-        macro_email_g: macro_email_g {
-            // 135115
-
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_EMAIL_GMAIL";
-            #binding-cells = <0>;
-            bindings = <&kp N1 &kp N3 &kp N5 &kp N1 &kp N1 &kp N5>;
-        };
     };
 
     combos {
@@ -166,63 +138,69 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 3 ESC  &kp Q  &lt 1 W       &lt 2 E    &kp R            &kp T      &kp Y       &kp U        &kp I        &kp O        &kp P     &lt 3 MINUS
-&kp ENTER  &kp A  &mt LSHFT S   &kp D      &kp F            &kp G      &kp H       &kp J        &mt LCTRL K  &mt LSHFT L  &kp SEMI  &kp SQT
-&kp CAPS   &kp Z  &kp X         &kp C      &kp V            &kp B      &kp N       &kp M        &kp COMMA    &kp DOT      &kp FSLH  &kp BSLH
-                  &kp LC(C)     &kp LC(V)  &kp BSPC         &kp SPACE  &lt 2 LEFT  &lt 1 RIGHT  &kp LBKT     &kp RBKT
-                  &kp LEFT_ALT  &kp GRAVE  &mt LCTRL LSHFT  &lt 1 DEL  &kp UP      &kp EQUAL    &kp DOWN     &kp RCTRL
+&lt 2 ESC               &as RIGHT_SHIFT Q  &as RIGHT_SHIFT W  &as RIGHT_SHIFT E        &as RIGHT_SHIFT R      &as RIGHT_SHIFT R      &as LEFT_SHIFT Y  &as LEFT_SHIFT U  &as LEFT_SHIFT I      &as LEFT_SHIFT O       &as LEFT_SHIFT P          &lt 2 BACKSPACE
+&mt LEFT_SHIFT TAB      &as RIGHT_SHIFT A  &as RIGHT_SHIFT S  &as RIGHT_SHIFT D        &as RIGHT_SHIFT F      &as RIGHT_SHIFT G      &as LEFT_SHIFT H  &as LEFT_SHIFT J  &as LEFT_SHIFT K      &as LEFT_SHIFT L       &as LEFT_SHIFT SEMICOLON  &mt RIGHT_SHIFT ENTER
+&mt LCTRL LEFT_BRACKET  &as RIGHT_SHIFT Z  &as RIGHT_SHIFT X  &as RIGHT_SHIFT C        &as RIGHT_SHIFT V      &as RIGHT_SHIFT B      &as LEFT_SHIFT N  &as LEFT_SHIFT M  &as LEFT_SHIFT COMMA  &as LEFT_SHIFT PERIOD  &as LEFT_SHIFT SLASH      &mt RCTRL RIGHT_BRACKET
+                                           &kp LEFT_ALT       &mt LEFT_GUI LA(INSERT)  &kp BSPC               &lt 1 SPACE            &none             &none             &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
+                                           &none              &none                    &kp LS(LC(LA(LG(L))))  &kp LS(LA(LC(LG(R))))  &none             &none             &none                 &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
             trackball-bindings = <&tmv>;
         };
 
-        number_layer {
-            label = "NUMBER";
+        non-alpha {
+            label = "NonAlpha";
             bindings = <
-&kp FSLH   &kp STAR   &kp N7     &kp N8          &kp N9    &kp EQUAL  &kp F12   &kp F7     &kp F8   &kp F9   &none  &kp EQUAL
-&kp ENTER  &kp MINUS  &kp N4     &kp N5          &kp N6    &kp DOT    &none     &kp F4     &kp F5   &kp F6   &none  &kp MINUS
-&kp EQUAL  &kp PLUS   &kp N1     &kp N2          &kp N3    &kp N0     &none     &kp F1     &kp F2   &kp F3   &none  &none
-                      &kp LC(C)  &mt LALT LC(V)  &kp BSPC  &kp SPACE  &kp LEFT  &kp RIGHT  &kp F10  &kp F11
-                      &trans     &none           &kp SEMI  &kp SEMI   &kp UP    &kp DOWN   &none    &none
+&kp GRAVE       &kp N1           &kp N2          &kp N3        &kp N4          &kp N5            &kp N6             &kp N7         &kp N8         &kp N9                &kp N0                 &kp TILDE
+&sk LEFT_SHIFT  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH      &kp DOLLAR      &kp PERCENT       &kp CARET          &kp AMPERSAND  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &sk RIGHT_SHIFT
+&sk LCTRL       &kp PIPE         &kp LEFT_BRACE  &kp MINUS     &kp UNDERSCORE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EQUAL      &kp PLUS       &kp RIGHT_BRACE       &kp BACKSLASH          &sk RCTRL
+                                 &sk LEFT_ALT    &sk LEFT_GUI  &none           &none             &none              &none          &sk RIGHT_GUI  &sk RIGHT_ALT
+                                 &trans          &none         &none           &none             &none              &none          &none          &none
             >;
 
             trackball-bindings = <&tsl>;
-            sensor-bindings =
-                <&inc_dec_kp A B>,
-                <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp A B>, <&inc_dec_kp RIGHT LEFT>;
         };
 
-        symbol_layer {
-            label = "SYMBOL";
+        Movement {
+            label = "Movement";
             bindings = <
-&kp C_VOL_UP   &kp C_VOL_DN  &kp AMPS  &kp STAR   &kp LPAR   &kp RPAR   &none  &none     &kp UP    &none      &none  &none
-&kp C_BRI_UP   &kp C_BRI_DN  &kp DLLR  &kp PRCNT  &kp CARET  &kp UNDER  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
-&kp LS(TILDE)  &kp GRAVE     &kp EXCL  &kp AT     &kp HASH   &kp PLUS   &none  &none     &none     &none      &none  &none
-                             &none     &none      &kp C_RW   &kp C_FF   &none  &none     &none     &none
-                             &none     &none      &kp LSHFT  &none      &none  &none     &none     &none
+&none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp LC(LEFT)  &kp D          &kp U          &kp RC(RIGHT)  &kp PAUSE_BREAK  &none
+&kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &kp LEFT      &kp DOWN       &kp UP         &kp RIGHT      &kp F11          &kp RIGHT_SHIFT
+&kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP    &kp END        &kp F12          &kp RCTRL
+                                      &kp LEFT_ALT          &kp LEFT_GUI       &none            &none       &none         &none          &kp RIGHT_GUI  &kp RIGHT_ALT
+                                      &none                 &none              &kp LSHFT        &none       &none         &none          &none          &none
             >;
 
             trackball-bindings = <&tmv_fine>;
-            sensor-bindings =
-                <&inc_dec_kp A A>,
-                <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp A A>, <&inc_dec_kp RIGHT LEFT>;
         };
 
-        hotkey_layer {
-            label = "HOTKEY";
+        NumPad {
+            label = "NumPad";
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &bt BT_CLR    &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
-&none  &none         &none         &none         &none         &out OUT_USB  &out OUT_USB  &none         &none         &none         &none         &none
-&none  &none         &none         &none         &none         &out OUT_BLE  &out OUT_BLE  &none         &none         &none         &none         &none
-                     &none         &none         &none         &none         &none         &none         &none         &none
-                     &none         &none         &none         &none         &none         &none         &none         &none
+&kp K_CALC  &kp KP_SUBTRACT  &kp KP_N7   &kp KP_N8  &kp KP_N9  &kp KP_PLUS   &kp KP_PLUS  &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL  &none
+&none       &kp BACKSPACE    &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_ENTER  &kp LEFT     &kp UP        &kp DOWN         &kp RIGHT      &kp SPACE     &kp ENTER
+&none       &kp KP_DIVIDE    &kp KP_N1   &kp KP_N2  &kp KP_N3  &out OUT_BLE  &kp HOME     &kp PAGE_UP   &kp PAGE_DOWN    &kp END        &none         &none
+                             &kp KP_DOT  &kp KP_N0  &none      &none         &none        &none         &none            &none
+                             &none       &none      &none      &none         &none        &none         &none            &none
             >;
 
             trackball-bindings = <&tmv_x>;
-            sensor-bindings =
-                <&inc_dec_kp A A>,
-                <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp A A>, <&inc_dec_kp RIGHT LEFT>;
+        };
+
+        Configuration {
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR
+&none       &none         &none              &none             &none         &out OUT_BLE  &out OUT_BLE  &none         &none             &none              &none         &none
+&none       &none         &none              &none             &none         &out OUT_USB  &out OUT_USB  &none         &none             &none              &none         &none
+                          &ext_power EP_OFF  &ext_power EP_ON  &none         &none         &none         &none         &ext_power EP_ON  &ext_power EP_OFF
+                          &none              &none             &none         &none         &none         &none         &none             &none
+            >;
+
+            label = "Configuration";
         };
     };
 };
