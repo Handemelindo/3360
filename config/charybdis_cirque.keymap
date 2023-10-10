@@ -106,7 +106,7 @@
         Movement {
             label = "Movement";
             bindings = <
-&none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp LC(LEFT)  &kp D          &kp U          &kp RC(RIGHT)  &kp PAUSE_BREAK  &none
+&none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp LC(LEFT)  MWH_D          MWH_U          &kp RC(RIGHT)  &kp PAUSE_BREAK  &none
 &kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &kp LEFT      &kp DOWN       &kp UP         &kp RIGHT      &kp F11          &kp RIGHT_SHIFT
 &kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP    &kp END        &kp F12          &kp RCTRL
                                       &kp LEFT_ALT          &kp LEFT_GUI       &none            &to 4       &none         &none          &kp RIGHT_GUI  &kp RIGHT_ALT
