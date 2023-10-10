@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <50>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -78,11 +78,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 2 ESC               &as LS(Q) Q  &as LS(W) W   &as LS(E) E              &as LS(R) R  &as LS(T) T  &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O    &as LS(P) P    &lt 2 BACKSPACE
-&mt LEFT_SHIFT TAB      &as LS(A) A  &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G  &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L    &kp SEMICOLON  &mt RIGHT_SHIFT ENTER
-&mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as LS(C) C              &as LS(V) V  &as LS(B) B  &as LS(N) N  &as LS(M) M  &kp COMMA             &kp PERIOD     &kp SLASH      &mt RCTRL RIGHT_BRACKET
+&lt 2 ESC               &as LS(Q) Q  &as LS(W) W   &as LS(E) E              &as LS(R) R  &as LS(T) T  &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &lt 2 BACKSPACE
+&mt LEFT_SHIFT TAB      &as LS(A) A  &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G  &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
+&mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as LS(C) C              &as LS(V) V  &as LS(B) B  &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
                                      &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 ENTER  &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
-                                     &mkp LCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none        &none        &none                 &none
+                                     &mkp RCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none        &none        &none                 &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
@@ -92,11 +92,11 @@
         non-alpha {
             label = "NonAlpha";
             bindings = <
-&kp GRAVE       &kp N1           &kp N2          &kp N3        &kp N4          &kp N5            &kp N6             &kp N7         &kp N8         &kp N9                &kp N0                 &kp TILDE
-&sk LEFT_SHIFT  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH      &kp DOLLAR      &kp PERCENT       &kp CARET          &kp AMPERSAND  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &sk RIGHT_SHIFT
-&sk LCTRL       &kp PIPE         &kp LEFT_BRACE  &kp MINUS     &kp UNDERSCORE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EQUAL      &kp PLUS       &kp RIGHT_BRACE       &kp BACKSLASH          &sk RCTRL
-                                 &sk LEFT_ALT    &sk LEFT_GUI  &none           &none             &none              &none          &sk RIGHT_GUI  &sk RIGHT_ALT
-                                 &trans          &none         &none           &none             &none              &none          &none          &none
+&kp GRAVE       &as EXCLAMATION NUMBER_1  &as AT_SIGN N2  &as HASH N3   &as DOLLAR N4   &as PERCENT N5    &as CARET N6       &as AMPERSAND N7  &as ASTERISK N8  &as LEFT_PARENTHESIS N9  &as RIGHT_PARENTHESIS N0  &kp TILDE
+&sk LEFT_SHIFT  &kp EXCLAMATION           &kp AT_SIGN     &kp HASH      &kp DOLLAR      &kp PERCENT       &kp CARET          &kp AMPERSAND     &kp ASTERISK     &kp LEFT_PARENTHESIS     &kp RIGHT_PARENTHESIS     &sk RIGHT_SHIFT
+&sk LCTRL       &kp PIPE                  &kp LEFT_BRACE  &kp MINUS     &kp UNDERSCORE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EQUAL         &kp PLUS         &kp RIGHT_BRACE          &kp BACKSLASH             &sk RCTRL
+                                          &sk LEFT_ALT    &sk LEFT_GUI  &none           &none             &none              &none             &sk RIGHT_GUI    &sk RIGHT_ALT
+                                          &trans          &none         &none           &none             &none              &none             &none            &none
             >;
 
             trackball-bindings = <&tmv_fine>;
@@ -106,11 +106,11 @@
         Movement {
             label = "Movement";
             bindings = <
-&none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp LC(LEFT)  &kp D          &kp U          &kp RC(RIGHT)  &kp PAUSE_BREAK  &none
-&kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &kp LEFT      &kp DOWN       &kp UP         &kp RIGHT      &kp F11          &kp RIGHT_SHIFT
-&kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP    &kp END        &kp F12          &kp RCTRL
-                                      &kp LEFT_ALT          &kp LEFT_GUI       &none            &to 4       &none         &none          &kp RIGHT_GUI  &kp RIGHT_ALT
-                                      &none                 &none              &none            &none       &none         &none          &none          &none
+&none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp L              &kp D          &kp U          &kp R                &kp PAUSE_BREAK  &none
+&kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &as LC(LEFT) LEFT  &kp DOWN       &kp UP         &as LC(RIGHT) RIGHT  &kp F11          &kp RIGHT_SHIFT
+&kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME           &kp PAGE_DOWN  &kp PAGE_UP    &kp END              &kp F12          &kp RCTRL
+                                      &kp LEFT_ALT          &kp LEFT_GUI       &none            &to 4       &none              &none          &kp RIGHT_GUI  &kp RIGHT_ALT
+                                      &none                 &none              &none            &none       &none              &none          &none          &none
             >;
 
             trackball-bindings = <&tsl>;
