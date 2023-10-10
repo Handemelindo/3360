@@ -79,8 +79,8 @@
             label = "DEFAULT";
             bindings = <
 &lt 2 ESC               AS(Q)  AS(W)         AS(E)                    AS(R)        AS(T)        AS(Y)  AS(U)  AS(I)                 AS(O)          AS(P)          &lt 2 BACKSPACE
-&mt LEFT_SHIFT TAB      AS(A)  AX(S)         AS(D)                    AS(F)        AS(G)        AS(H)  AS(J)  AS(K)                 &kp L          AS(SEMICOLON)  &mt RIGHT_SHIFT ENTER
-&mt LCTRL LEFT_BRACKET  AS(Z)  AX(X)         AS(C)                    AS(V)        AS(B)        AS(N)  AS(M)  AS(COMMA)             AS(PERIOD)     AS(SLASH)      &mt RCTRL RIGHT_BRACKET
+&mt LEFT_SHIFT TAB      AS(A)  AX(S)         AS(D)                    AS(F)        AS(G)        AS(H)  AS(J)  AS(K)                 AS(L)          &kp SEMICOLON  &mt RIGHT_SHIFT ENTER
+&mt LCTRL LEFT_BRACKET  AS(Z)  AX(X)         AS(C)                    AS(V)        AS(B)        AS(N)  AS(M)  &kp COMMA             &kp PERIOD     &kp SLASH      &mt RCTRL RIGHT_BRACKET
                                &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 ENTER  &none  &none  &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
                                &mkp RCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none  &none  &none                 &none
             >;
