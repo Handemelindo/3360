@@ -82,7 +82,7 @@
 &mt LEFT_SHIFT TAB      &as LS(A) A  &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G  &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L    &kp SEMICOLON  &mt RIGHT_SHIFT ENTER
 &mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as LS(C) C              &as LS(V) V  &as LS(B) B  &as LS(N) N  &as LS(M) M  &kp COMMA             &kp PERIOD     &kp SLASH      &mt RCTRL RIGHT_BRACKET
                                      &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 ENTER  &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
-                                     &mkp RCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none        &none        &none                 &none
+                                     &mkp LCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none        &none        &none                 &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
