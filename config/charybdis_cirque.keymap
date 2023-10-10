@@ -78,11 +78,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 2 ESC               AS(Q)  AS(W)         AS(E)                    AS(R)        AS(T)        AS(Y)  AS(U)  AS(I)                 AS(O)          AS(P)          &lt 2 BACKSPACE
-&mt LEFT_SHIFT TAB      AS(A)  AS(S)         AS(D)                    AS(F)        AS(G)        AS(H)  AS(J)  AS(K)                 AS(L)          &kp SEMICOLON  &mt RIGHT_SHIFT ENTER
-&mt LCTRL LEFT_BRACKET  AS(Z)  AS(X)         AS(C)                    AS(V)        AS(B)        AS(N)  AS(M)  &kp COMMA             &kp PERIOD     &kp SLASH      &mt RCTRL RIGHT_BRACKET
-                               &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 ENTER  &none  &none  &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
-                               &mkp RCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none  &none  &none                 &none
+&lt 2 ESC               &as LS(Q) Q  &as LS(W) W   &as LS(E) E              &as LS(R) R  &as LS(T) T  &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O    &as LS(P) P    &lt 2 BACKSPACE
+&mt LEFT_SHIFT TAB      &as LS(A) A  &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G  &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L    &kp SEMICOLON  &mt RIGHT_SHIFT ENTER
+&mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as LS(C) C              &as LS(V) V  &as LS(B) B  &as LS(N) N  &as LS(M) M  &kp COMMA             &kp PERIOD     &kp SLASH      &mt RCTRL RIGHT_BRACKET
+                                     &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 ENTER  &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
+                                     &mkp RCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none        &none        &none                 &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
