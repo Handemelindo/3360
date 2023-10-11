@@ -85,7 +85,10 @@
                                      &mkp RCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none        &none        &none                 &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp RA(TAB) RA(RS(TAB))>;
+
             trackball-bindings = <&tmv>;
         };
 
@@ -100,7 +103,9 @@
             >;
 
             trackball-bindings = <&tmv_fine>;
-            sensor-bindings = <&inc_dec_kp A B>, <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings =
+                <&inc_dec_kp A B>,
+                <&inc_dec_kp LG(LC(RIGHT)) LG(LC(LEFT))>;
         };
 
         Movement {
@@ -109,22 +114,24 @@
 &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp L              &kp D          &kp U          &kp R                &kp PAUSE_BREAK  &none
 &kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &as LC(LEFT) LEFT  &kp DOWN       &kp UP         &as LC(RIGHT) RIGHT  &kp F11          &kp RIGHT_SHIFT
 &kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME           &kp PAGE_DOWN  &kp PAGE_UP    &kp END              &kp F12          &kp RCTRL
-                                      &kp LEFT_ALT          &kp LEFT_GUI       &none            &to 4       &none              &none          &kp RIGHT_GUI  &kp RIGHT_ALT
+                                      &kp LEFT_ALT          &kp LEFT_GUI       &to 3            &to 4       &none              &none          &kp RIGHT_GUI  &kp RIGHT_ALT
                                       &none                 &none              &none            &none       &none              &none          &none          &none
             >;
 
             trackball-bindings = <&tsl>;
-            sensor-bindings = <&inc_dec_kp A A>, <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings =
+                <&inc_dec_kp A A>,
+                <&inc_dec_kp LC(RIGHT) LC(LEFT)>;
         };
 
         NumPad {
             label = "NumPad";
             bindings = <
-&kp K_CALC  &kp KP_SUBTRACT  &kp KP_N7   &kp KP_N8  &kp KP_N9  &kp KP_PLUS   &kp KP_PLUS  &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL  &none
-&none       &kp BACKSPACE    &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp KP_ENTER  &kp LEFT     &kp UP        &kp DOWN         &kp RIGHT      &kp SPACE     &kp ENTER
-&none       &kp KP_DIVIDE    &kp KP_N1   &kp KP_N2  &kp KP_N3  &out OUT_BLE  &kp HOME     &kp PAGE_UP   &kp PAGE_DOWN    &kp END        &none         &none
-                             &kp KP_DOT  &kp KP_N0  &none      &none         &none        &none         &none            &none
-                             &none       &none      &none      &none         &none        &none         &none            &none
+&kp K_CALC  &kp KP_SUBTRACT  &kp KP_N7   &kp KP_N8  &kp KP_N9   &kp KP_PLUS   &kp KP_PLUS  &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL  &none
+&none       &kp BACKSPACE    &kp KP_N4   &kp KP_N5  &kp KP_N6   &kp KP_ENTER  &kp LEFT     &kp UP        &kp DOWN         &kp RIGHT      &kp SPACE     &kp ENTER
+&to 0       &kp KP_DIVIDE    &kp KP_N1   &kp KP_N2  &kp KP_N3   &out OUT_BLE  &kp HOME     &kp PAGE_UP   &kp PAGE_DOWN    &kp END        &none         &none
+                             &kp KP_DOT  &kp KP_N0  &kp KP_DOT  &kp KP_N0     &none        &none         &none            &none
+                             &none       &none      &none       &none         &none        &none         &none            &none
             >;
 
             trackball-bindings = <&tmv_x>;
@@ -135,7 +142,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR
 &none       &none         &none              &none             &none         &out OUT_BLE  &out OUT_BLE  &none         &none             &none              &none         &none
-&none       &none         &none              &none             &none         &out OUT_USB  &out OUT_USB  &none         &none             &none              &none         &none
+&to 0       &none         &none              &none             &none         &out OUT_USB  &out OUT_USB  &none         &none             &none              &none         &none
                           &ext_power EP_OFF  &ext_power EP_ON  &none         &none         &none         &none         &ext_power EP_ON  &ext_power EP_OFF
                           &none              &none             &none         &none         &none         &none         &none             &none
             >;
