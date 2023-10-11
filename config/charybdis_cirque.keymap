@@ -72,7 +72,7 @@
         };
 
         rc_l {
-            bindings = <&kp L>;
+            bindings = <&mkp RCLK>;
             key-positions = <13 14>;
             timeout-ms = <50>;
         };
