@@ -59,16 +59,40 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_rclick {
+        rc_r {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <21 22>;
             bindings = <&mkp RCLK>;
         };
 
-        combo_lclick {
+        lc_l {
             timeout-ms = <50>;
-            key-positions = <15 14>;
+            key-positions = <14 13>;
             bindings = <&mkp LCLK>;
+        };
+
+        rc_l {
+            bindings = <&kp L>;
+            key-positions = <15 16>;
+            timeout-ms = <50>;
+        };
+
+        lc_r {
+            bindings = <&kp L>;
+            key-positions = <19 20>;
+            timeout-ms = <50>;
+        };
+
+        mc_l {
+            bindings = <&kp M>;
+            key-positions = <14 15>;
+            timeout-ms = <50>;
+        };
+
+        mc_r {
+            bindings = <&kp M>;
+            key-positions = <20 21>;
+            timeout-ms = <50>;
         };
     };
 
@@ -119,9 +143,7 @@
             >;
 
             trackball-bindings = <&tsl>;
-            sensor-bindings =
-                <&inc_dec_kp A A>,
-                <&inc_dec_kp LC(RIGHT) LC(LEFT)>;
+            sensor-bindings = <&inc_dec_kp A A>, <&inc_dec_kp TAB RS(TAB)>;
         };
 
         NumPad {
