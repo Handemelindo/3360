@@ -72,25 +72,25 @@
         };
 
         rc_l {
-            bindings = <&kp L>;
+            bindings = <&mkp RCLK>;
             key-positions = <15 16>;
             timeout-ms = <50>;
         };
 
         lc_r {
-            bindings = <&kp L>;
+            bindings = <&mkp LCLK>;
             key-positions = <19 20>;
             timeout-ms = <50>;
         };
 
         mc_l {
-            bindings = <&kp M>;
+            bindings = <&mkp MCLK>;
             key-positions = <14 15>;
             timeout-ms = <50>;
         };
 
         mc_r {
-            bindings = <&kp M>;
+            bindings = <&mkp MCLK>;
             key-positions = <20 21>;
             timeout-ms = <50>;
         };
@@ -106,7 +106,7 @@
 &mt LEFT_SHIFT TAB      &as LS(A) A  &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G  &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
 &mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as LS(C) C              &as LS(V) V  &as LS(B) B  &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
                                      &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 ENTER  &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
-                                     &mkp RCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none        &none        &none                 &none
+                                     &mkp LCLK     &kp RC(V)                &mkp RCLK    &kp RC(C)    &none        &none        &none                 &none
             >;
 
             sensor-bindings =
