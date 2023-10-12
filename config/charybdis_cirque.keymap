@@ -51,6 +51,27 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        C_Copy_ClIpboard: C_Copy_ClIpboard {
+            compatible = "zmk,behavior-tap-dance";
+            label = "C_COPY_CLIPBOARD";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&as RS(C) C>, <&kp RC(C)>, <&kp RG(RC(V))>;
+        };
+        V_Paste_PlainPaste: V_Paste_PlainPaste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "V_PASTE_PLAINPASTE";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&as RS(V) V>, <&kp RC(V)>, <&kp RG(V)>;
+        };
+        A_SelectAll: A_SelectAll {
+            compatible = "zmk,behavior-tap-dance";
+            label = "A_SELECTALL";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&as RS(A) A>, <&kp RC(A)>;
+        };
     };
 
     macros {
@@ -108,11 +129,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 5 ESC               &as LS(Q) Q  &as LS(W) W   &as LS(E) E              &as LS(R) R  &as LS(T) T          &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &lt 3 BACKSPACE
-&mt LEFT_SHIFT TAB      &as LS(A) A  &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G          &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
-&mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as LS(C) C              &as LS(V) V  &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
-                                     &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 SPACE          &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
-                                     &mkp LCLK     &as RG(V) RC(C)          &mkp RCLK    &as RC(RG(V)) RC(V)  &none        &none        &none                 &none
+&lt 5 ESC               &as LS(Q) Q   &as LS(W) W   &as LS(E) E              &as LS(R) R          &as LS(T) T          &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &lt 3 BACKSPACE
+&mt LEFT_SHIFT TAB      &A_SelectAll  &as LS(S) S   &as LS(D) D              &as LS(F) F          &as LS(G) G          &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
+&mt LCTRL LEFT_BRACKET  &as LS(Z) Z   &as LS(X) X   &C_Copy_ClIpboard        &V_Paste_PlainPaste  &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
+                                      &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE          &lt 2 SPACE          &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
+                                      &mkp LCLK     &as RG(V) RC(C)          &mkp RCLK            &as RC(RG(V)) RC(V)  &none        &none        &none                 &none
             >;
 
             sensor-bindings =
