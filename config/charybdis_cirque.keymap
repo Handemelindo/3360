@@ -54,6 +54,12 @@
     };
 
     macros {
+        OAuthEvent: OAuthEvent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(O) &kp LS(A) &kp U &kp T &kp H &kp LS(E) &kp V &kp E &kp N &kp T &kp UNDER &kp LS(G) &kp L &kp O &kp B &kp A &kp L &kp RET &kp PIPE &kp SPACE &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp E &kp N &kp V &kp UNDER &kp T &kp I &kp M &kp E &kp SPACE &kp GT &kp SPACE &kp A &kp G &kp O &kp LPAR &kp RPAR &kp RET &kp PIPE &kp SPACE &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp E &kp N &kp V &kp UNDER &kp C &kp L &kp O &kp U &kp D &kp UNDER &kp E &kp N &kp V &kp I &kp R &kp O &kp N &kp M &kp E &kp N &kp T &kp SPACE &kp EQUAL &kp EQUAL &kp SPACE &kp DQT &kp DQT>;
+            label = "OAUTHEVENT";
+        };
     };
 
     combos {
@@ -102,7 +108,7 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 2 ESC               &as LS(Q) Q  &as LS(W) W   &as LS(E) E              &as LS(R) R  &as LS(T) T          &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &lt 2 BACKSPACE
+&lt 5 ESC               &as LS(Q) Q  &as LS(W) W   &as LS(E) E              &as LS(R) R  &as LS(T) T          &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &lt 3 BACKSPACE
 &mt LEFT_SHIFT TAB      &as LS(A) A  &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G          &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
 &mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as LS(C) C              &as LS(V) V  &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
                                      &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 SPACE          &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
@@ -116,7 +122,7 @@
             trackball-bindings = <&tmv>;
         };
 
-        non-alpha {
+        NonAlpha {
             label = "NonAlpha";
             bindings = <
 &kp GRAVE       &as EXCLAMATION NUMBER_1  &as AT_SIGN N2  &as HASH N3   &as DOLLAR N4   &as PERCENT N5    &as CARET N6       &as AMPERSAND N7  &as ASTERISK N8  &as LEFT_PARENTHESIS N9  &as RIGHT_PARENTHESIS N0  &kp TILDE
@@ -170,6 +176,18 @@
             >;
 
             label = "Configuration";
+        };
+
+        Macros {
+            bindings = <
+&none  &none  &none  &none  &none  &none  &OAuthEvent  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none
+              &none  &none  &none  &none  &none        &none  &none  &none
+              &none  &none  &none  &none  &none        &none  &none  &none
+            >;
+
+            label = "Macros";
         };
     };
 };
