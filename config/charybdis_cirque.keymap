@@ -55,50 +55,64 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_CL_HOME";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&as LC(LEFT) LEFT>, <&kp HOME>;
         };
-        V_CV_GV: V_CV_GV {
+        V_CV_GCV: V_CV_GCV {
             compatible = "zmk,behavior-tap-dance";
-            label = "V_CV_GV";
+            label = "V_CV_GCV";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&as RS(V) V>, <&kp RC(V)>, <&kp RG(V)>;
+            tapping-term-ms = <200>;
+            bindings = <&as RS(V) V>, <&kp RC(V)>, <&kp RG(RC(V))>;
         };
         A_CA: A_CA {
             compatible = "zmk,behavior-tap-dance";
             label = "A_CA";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&as RS(A) A>, <&kp RC(A)>;
         };
         BS_CBS: BS_CBS {
             compatible = "zmk,behavior-tap-dance";
             label = "BS_CBS";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&lt 3 BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
         Rght_CRght_End: Rght_CRght_End {
             compatible = "zmk,behavior-tap-dance";
             label = "RGHT_CRGHT_END";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&as LC(RIGHT) RIGHT>, <&kp END>;
         };
         T_CT: T_CT {
             compatible = "zmk,behavior-tap-dance";
             label = "T_CT";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&as RS(T) T>, <&kp RC(T)>;
         };
         W_CW: W_CW {
             compatible = "zmk,behavior-tap-dance";
             label = "W_CW";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&as RS(W) W>, <&kp RC(W)>;
+        };
+        C_CC_GV: C_CC_GV {
+            compatible = "zmk,behavior-tap-dance";
+            label = "C_CC_GV";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&as RS(C) C>, <&kp RC(C)>, <&kp RG(V)>;
+        };
+        R_CR: R_CR {
+            compatible = "zmk,behavior-tap-dance";
+            label = "R_CR";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&as RS(R) R>, <&kp RC(R)>;
         };
     };
 
@@ -157,9 +171,9 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 5 ESC               &as LS(Q) Q  &W_CW         &as LS(E) E              &as LS(R) R  &T_CT                &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &BS_CBS
+&lt 5 ESC               &as LS(Q) Q  &W_CW         &as LS(E) E              &R_CR        &T_CT                &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &BS_CBS
 &mt LEFT_SHIFT TAB      &A_CA        &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G          &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
-&mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &Left_CL_Home            &V_CV_GV     &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
+&mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &C_CC_GV                 &V_CV_GCV    &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
                                      &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 SPACE          &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
                                      &mkp LCLK     &as RG(V) RC(C)          &mkp RCLK    &as RC(RG(V)) RC(V)  &none        &none        &none                 &none
             >;
