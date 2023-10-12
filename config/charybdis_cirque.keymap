@@ -51,26 +51,54 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        C_Copy_ClIpboard: C_Copy_ClIpboard {
+        Left_CL_Home: Left_CL_Home {
             compatible = "zmk,behavior-tap-dance";
-            label = "C_COPY_CLIPBOARD";
+            label = "LEFT_CL_HOME";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
-            bindings = <&as RS(C) C>, <&kp RC(C)>, <&kp RG(RC(V))>;
+            bindings = <&as LC(LEFT) LEFT>, <&kp HOME>;
         };
-        V_Paste_PlainPaste: V_Paste_PlainPaste {
+        V_CV_GV: V_CV_GV {
             compatible = "zmk,behavior-tap-dance";
-            label = "V_PASTE_PLAINPASTE";
+            label = "V_CV_GV";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
             bindings = <&as RS(V) V>, <&kp RC(V)>, <&kp RG(V)>;
         };
-        A_SelectAll: A_SelectAll {
+        A_CA: A_CA {
             compatible = "zmk,behavior-tap-dance";
-            label = "A_SELECTALL";
+            label = "A_CA";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
             bindings = <&as RS(A) A>, <&kp RC(A)>;
+        };
+        BS_CBS: BS_CBS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BS_CBS";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&lt 3 BACKSPACE>, <&kp LC(BACKSPACE)>;
+        };
+        Rght_CRght_End: Rght_CRght_End {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RGHT_CRGHT_END";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&as LC(RIGHT) RIGHT>, <&kp END>;
+        };
+        T_CT: T_CT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "T_CT";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&as RS(T) T>, <&kp RC(T)>;
+        };
+        W_CW: W_CW {
+            compatible = "zmk,behavior-tap-dance";
+            label = "W_CW";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&as RS(W) W>, <&kp RC(W)>;
         };
     };
 
@@ -129,11 +157,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 5 ESC               &as LS(Q) Q   &as LS(W) W   &as LS(E) E              &as LS(R) R          &as LS(T) T          &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &lt 3 BACKSPACE
-&mt LEFT_SHIFT TAB      &A_SelectAll  &as LS(S) S   &as LS(D) D              &as LS(F) F          &as LS(G) G          &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
-&mt LCTRL LEFT_BRACKET  &as LS(Z) Z   &as LS(X) X   &C_Copy_ClIpboard        &V_Paste_PlainPaste  &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
-                                      &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE          &lt 2 SPACE          &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
-                                      &mkp LCLK     &as RG(V) RC(C)          &mkp RCLK            &as RC(RG(V)) RC(V)  &none        &none        &none                 &none
+&lt 5 ESC               &as LS(Q) Q  &W_CW         &as LS(E) E              &as LS(R) R  &T_CT                &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &BS_CBS
+&mt LEFT_SHIFT TAB      &A_CA        &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G          &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
+&mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &Left_CL_Home            &V_CV_GV     &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
+                                     &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &lt 2 SPACE          &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
+                                     &mkp LCLK     &as RG(V) RC(C)          &mkp RCLK    &as RC(RG(V)) RC(V)  &none        &none        &none                 &none
             >;
 
             sensor-bindings =
@@ -162,11 +190,11 @@
         Movement {
             label = "Movement";
             bindings = <
-&none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp L              &kp D          &kp U          &kp R                &kp PAUSE_BREAK  &none
-&kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &as LC(LEFT) LEFT  &kp DOWN       &kp UP         &as LC(RIGHT) RIGHT  &kp F11          &kp RIGHT_SHIFT
-&kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME           &kp PAGE_DOWN  &kp PAGE_UP    &kp END              &kp F12          &kp RCTRL
-                                      &kp LEFT_ALT          &kp LEFT_GUI       &to 3            &to 4       &none              &none          &kp RIGHT_GUI  &kp RIGHT_ALT
-                                      &none                 &none              &none            &none       &none              &none          &none          &none
+&none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp L          &kp D               &kp U                 &kp R            &kp PAUSE_BREAK  &none
+&kp LEFT_SHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &Left_CL_Home  &as PAGE_DOWN DOWN  &as PAGE_UP UP_ARROW  &Rght_CRght_End  &kp F11          &kp RIGHT_SHIFT
+&kp LCTRL       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME       &kp PAGE_DOWN       &kp PAGE_UP           &kp END          &kp F12          &kp RCTRL
+                                      &kp LEFT_ALT          &kp LEFT_GUI       &to 3            &to 4       &none          &none               &kp RIGHT_GUI         &kp RIGHT_ALT
+                                      &none                 &none              &none            &none       &none          &none               &none                 &none
             >;
 
             trackball-bindings = <&tsl>;
