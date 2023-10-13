@@ -56,7 +56,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_CL_HOME";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&as LC(LEFT) LEFT>, <&kp HOME>;
         };
         V_CV_GCV: V_CV_GCV {
@@ -77,14 +77,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BS_CBS";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&lt 3 BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
         Rght_CRght_End: Rght_CRght_End {
             compatible = "zmk,behavior-tap-dance";
             label = "RGHT_CRGHT_END";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&as LC(RIGHT) RIGHT>, <&kp END>;
         };
         T_CT: T_CT {
