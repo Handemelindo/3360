@@ -64,7 +64,7 @@
             label = "BS_CBS";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&lt 3 BACKSPACE>, <&kp LC(BACKSPACE)>;
+            bindings = <&mt RCTRL BACKSPACE>, <&kp LC(BACKSPACE)>;
         };
         Rght_CRght_End: Rght_CRght_End {
             compatible = "zmk,behavior-tap-dance";
@@ -72,14 +72,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&as LC(RIGHT) RIGHT>, <&kp END>;
-        };
-        Space_Enter: Space_Enter {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SPACE_ENTER";
-            #binding-cells = <0>;
-            bindings = <&lt 2 SPACE>, <&kp ENTER>;
-
-            tapping-term-ms = <150>;
         };
     };
 
@@ -132,11 +124,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 2 ESC               &as LS(Q) Q  &as RS(W) W   &as LS(E) E              &as RS(R) R  &as RS(T) T          &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &BS_CBS
-&mt LEFT_SHIFT TAB      &as RS(A) A  &as LS(S) S   &as LS(D) D              &as LS(F) F  &as LS(G) G          &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
-&mt LCTRL LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as RS(C) C              &as RS(V) V  &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &mt RCTRL RIGHT_BRACKET
-                                     &kp LEFT_ALT  &mt LEFT_GUI LA(INSERT)  &lt 1 SPACE  &Space_Enter         &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
-                                     &mkp LCLK     &as RG(V) RC(C)          &mkp RCLK    &as RC(RG(V)) RC(V)  &none        &none        &none                 &none
+&mt LCTRL ESCAPE    &as LS(Q) Q  &as RS(W) W   &as LS(E) E      &as RS(R) R  &as RS(T) T          &as LS(Y) Y  &as LS(U) U  &as LS(I) I           &as LS(O) O            &as LS(P) P                  &BS_CBS
+&mt LEFT_SHIFT TAB  &as RS(A) A  &as LS(S) S   &as LS(D) D      &as LS(F) F  &as LS(G) G          &as LS(H) H  &as LS(J) J  &as LS(K) K           &as LS(L) L            &as LS(SEMICOLON) SEMICOLON  &mt RIGHT_SHIFT ENTER
+&lt 2 LEFT_BRACKET  &as LS(Z) Z  &as LS(X) X   &as RS(C) C      &as RS(V) V  &as LS(B) B          &as LS(N) N  &as LS(M) M  &as LS(COMMA) COMMA   &as LS(PERIOD) PERIOD  &as LS(SLASH) SLASH          &lt 3 RIGHT_BRACKET
+                                 &kp LEFT_ALT  &lt 2 SPACE      &lt 1 SPACE  &none                &none        &none        &mt RIGHT_GUI DELETE  &kp RIGHT_ALT
+                                 &mkp LCLK     &as RG(V) RC(C)  &mkp RCLK    &as RC(RG(V)) RC(V)  &none        &none        &none                 &none
             >;
 
             sensor-bindings =
@@ -149,9 +141,9 @@
         NonAlpha {
             label = "NonAlpha";
             bindings = <
-&kp GRAVE       &as EXCLAMATION NUMBER_1  &as AT_SIGN N2  &as HASH N3   &as DOLLAR N4   &as PERCENT N5    &as CARET N6       &as AMPERSAND N7  &as ASTERISK N8  &as LEFT_PARENTHESIS N9  &as RIGHT_PARENTHESIS N0  &kp TILDE
+&sk LCTRL       &as EXCLAMATION NUMBER_1  &as AT_SIGN N2  &as HASH N3   &as DOLLAR N4   &as PERCENT N5    &as CARET N6       &as AMPERSAND N7  &as ASTERISK N8  &as LEFT_PARENTHESIS N9  &as RIGHT_PARENTHESIS N0  &sk RCTRL
 &sk LEFT_SHIFT  &kp EXCLAMATION           &kp AT_SIGN     &kp HASH      &kp DOLLAR      &kp PERCENT       &kp CARET          &kp AMPERSAND     &kp ASTERISK     &kp LEFT_PARENTHESIS     &kp RIGHT_PARENTHESIS     &sk RIGHT_SHIFT
-&sk LCTRL       &kp PIPE                  &kp LEFT_BRACE  &kp MINUS     &kp UNDERSCORE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EQUAL         &kp PLUS         &kp RIGHT_BRACE          &kp BACKSLASH             &sk RCTRL
+&kp GRAVE       &kp PIPE                  &kp LEFT_BRACE  &kp MINUS     &kp UNDERSCORE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EQUAL         &kp PLUS         &kp RIGHT_BRACE          &kp BACKSLASH             &kp TILDE
                                           &sk LEFT_ALT    &sk LEFT_GUI  &none           &none             &none              &none             &sk RIGHT_GUI    &sk RIGHT_ALT
                                           &trans          &none         &none           &none             &none              &none             &none            &none
             >;
@@ -165,9 +157,9 @@
         Movement {
             label = "Movement";
             bindings = <
-&none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp L          &kp D               &kp U                 &kp R            &kp PAUSE_BREAK  &none
+&kt LCTRL   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp L          &kp D               &kp U                 &kp R            &kp PAUSE_BREAK  &kt RCTRL
 &kt LSHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &Left_CL_Home  &as PAGE_DOWN DOWN  &as PAGE_UP UP_ARROW  &Rght_CRght_End  &kp F11          &kt RSHIFT
-&kt LCTRL   &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME       &kp PAGE_DOWN       &kp PAGE_UP           &kp END          &kp F12          &kt RCTRL
+&none       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME       &kp PAGE_DOWN       &kp PAGE_UP           &kp END          &kp F12          &none
                                   &kt LALT              &kt LGUI           &to 3            &to 4       &none          &none               &kt RGUI              &kt RALT
                                   &none                 &none              &none            &none       &none          &none               &none                 &none
             >;
