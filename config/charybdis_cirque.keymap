@@ -150,8 +150,8 @@
         Movement {
             label = "Movement";
             bindings = <
-&kt LCTRL   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp L             &kp D               &kp U                 &kp R            &kp PAUSE_BREAK  &kt RCTRL
-&kt LSHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &Left_Home_CLeft  &as PAGE_DOWN DOWN  &as PAGE_UP UP_ARROW  &Rght_End_CRght  &kp F11          &kt RSHIFT
+&kp LCTRL   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &kp L             &kp D               &kp U                 &kp R            &kp PAUSE_BREAK  &kp RCTRL
+&kp LSHIFT  &kp F1                &kp F2                &kp F3             &kp F4           &kp F5      &Left_Home_CLeft  &as PAGE_DOWN DOWN  &as PAGE_UP UP_ARROW  &Rght_End_CRght  &kp F11          &kp RSHIFT
 &none       &kp F6                &kp F7                &kp F8             &kp F9           &kp F10     &kp HOME          &kp PAGE_DOWN       &kp PAGE_UP           &kp END          &kp F12          &none
                                   &kt LALT              &kt LGUI           &to 3            &to 4       &none             &none               &kt RGUI              &kt RALT
                                   &none                 &none              &none            &none       &none             &none               &none                 &none
