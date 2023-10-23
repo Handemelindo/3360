@@ -189,9 +189,9 @@
 
         Handemelindo {
             bindings = <
-&mt LCTRL ESCAPE  &kp SQT     &kp Z         &kp N                  &kp R        &kp F        &kp V  &kp C  &kp G                   &kp P     &kp MINUS  &mt RCTRL BACKSPACE
+&mt LCTRL ESCAPE  &kp SQT     &kp Y         &kp P                  &kp R        &kp F        &kp V  &kp C  &kp N                   &kp G     &kp MINUS  &mt RCTRL BACKSPACE
 &mt LSHFT TAB     &kp A       &kp O         &kp E                  &kp U        &kp I        &kp T  &kp D  &kp H                   &kp L     &kp S      &mt RSHIFT ENTER
-&lt 2 INSERT      &kp PERIOD  &kp Q         &kp J                  &kp K        &kp X        &kp B  &kp M  &kp W                   &kp Y     &kp COMMA  &lt 3 DELETE
+&lt 2 INSERT      &kp PERIOD  &kp Q         &kp J                  &kp K        &kp X        &kp B  &kp M  &kp W                   &kp Z     &kp COMMA  &lt 3 DELETE
                               &kp LEFT_ALT  &mt LGUI LEFT_BRACKET  &lt 1 SPACE  &lt 2 SPACE  &none  &none  &mt RGUI RIGHT_BRACKET  &kp RALT
                               &to 0         &to 0                  &to 0        &to 0        &none  &none  &none                   &none
             >;
